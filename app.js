@@ -41,8 +41,8 @@ function generateCash() {
         result.innerHTML=" ";
       } else {
         returnDiv.classList.add("hidden");
-        result.innerText = `Cash given by customer is less by Rs ${
-          bill.value - cashGiven.value}`;
+        result.innerText = `The cash given is less by ${
+          bill.value - cashGiven.value} rupees. Do you want to wash plates? `;
       }
     } else {
       result.innerHTML = "Invalid characters entered.";
