@@ -1,5 +1,5 @@
 # Cash Manager App 
-This Vanilla JS app would help you calculate the minimum number of notes you need to return to a customer when he pays the bill.
+This Vanilla JS app would help you calculate the minimum number of notes you need to return to a customer when he/she pays the bill.
 
 ### How does the App work?
 The App has currencies of Rupees 2000, 500, 100, 50, 20, 10, 5, 1. The user would have to do the following things:
