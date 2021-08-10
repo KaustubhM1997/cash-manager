@@ -51,7 +51,7 @@ button{
     font-size: 1rem;
     border: none;
     margin: 1rem auto 0;
-    background-color:var(--secondary-color);
+    background-color: white;
     color: var(--primary-color);
     font-weight: bold;
     border-radius: 0.5rem;
@@ -60,8 +60,8 @@ button{
 
 button:hover {
 
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--secondary-color);
+    /* color: white; */
    
 }
 
