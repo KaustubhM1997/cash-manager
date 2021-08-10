@@ -1,108 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cash Manager App</title>
+    <title>Cash Register Manager</title>
+
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <section class="section">
+        <h1>Cash Register Manager</h1>
+        <p>Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
+        <div>
+            <div class="label">Bill Amount:</div>
+            <input type="number" id="billAmt" > 
+            <button id="nextBtn">Next</button> 
+        </div>
 
-    <h1>Cash Manager App</h1>
+        <div class="cashGivenInput">
+            <div class="label">Cash Given:</div>
+            <input type="number" id="cashGiven" >
+            <button id="checkBtn">Check</button> 
+        </div>
+        <div class="errorMsg"></div>
 
-    <form>
-
-        <p>
-
-            <label>Your total Bill is: </label>
-
-            <input id="total-bill" type="number" placeholder="0" />
-
-        </p>
-
-        <p class="customer hidden">
-            <label>Cash Given is: </label>
-
-            <input id="cash-given" type="number" placeholder="0" />
-
-        </p>
-
-
-
-    </form>
-
-    <button id="btn-check">Next</button>
-
-
-    <p id="result-text"></p>
-
-
-
-    <div class="returnDiv hidden">
-
-        <table id="table">
-
-            <thead>
-
-                <tr>
-
-                    <th>Notes</th>
-                    <th>Number of Notes</th>
-                </tr>
-
-
-            </thead>
-
-            <tbody>
-                <tr>
+        <div class="changeReturn">
+            <div class="label">Return Change:</div>
+            <div id="output">
+                <table>
+                    <tr>
+                    <th>No.of Notes</td>
+                    <td class="noOfNotes"></td>
+                    <td class="noOfNotes"></td>
+                    <td class="noOfNotes"></td>
+                    <td class="noOfNotes"></td>
+                    <td class="noOfNotes"></td>
+                    <td class="noOfNotes"></td>
+                    <td class="noOfNotes"></td>
+                    </tr>
+                    <tr>
+                    <th>Note</td>
                     <td>2000</td>
-                    <td>-</td>
-                </tr>
-                <tr>
                     <td>500</td>
-                    <td>-</td>
-                </tr>
-                <tr>
                     <td>100</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>50</td>
-                    <td>-</td>
-                </tr>
-                <tr>
                     <td>20</td>
-                    <td>-</td>
-                </tr>
-                <tr>
                     <td>10</td>
-                    <td>-</td>
-                </tr>
-                <tr>
                     <td>5</td>
-                    <td>-</td>
-                </tr>
-                <tr>
                     <td>1</td>
-                    <td>-</td>
-                </tr>
-            </tbody>
-        </table>
+                    </tr>
+                </table>
+            </div>
+        </div>
 
+    </section>
 
-
-
-    </div>
-
-
-
-    <script src="app.js" type="text/javascript"></script>
-
-
-
+    <script src="app.js"></script>
 </body>
-
 </html>
