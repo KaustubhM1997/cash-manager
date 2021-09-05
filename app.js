@@ -21,8 +21,8 @@ nextBtn.addEventListener('click', ()=>{
     hideError();
     if(Number(billAmt.value)>0){
 
-        nextBtn.style.display = "none";
-        cashGivenDiv.style.display = "block";
+        nextBtn.style.display = "none"; // disabling the next button as bill entered is more than 0
+        cashGivenDiv.style.display = "block"; // enabling cash given field
     }
     else{
         showError("Enter valid bill amount");
@@ -31,7 +31,7 @@ nextBtn.addEventListener('click', ()=>{
 
 
 //check btn clicked handler
-checkBtn.addEventListener('click', ()=>{
+checkBtn.addEventListener('click', ()=>{    // when the check button is clicked
     clearNoOfNotes();
     hideError();
     //error handling
@@ -63,7 +63,7 @@ function calculateNotes(bill, cash){
         showError("No amount should be returned");
         return;
     }
-    changeReturnDiv.style.display = "block";
+    changeReturnDiv.style.display = "block"; // to display the table 
 
     for(let i=0; i<arrayNoteAmt.length; i++){
         returnAmt= compare(returnAmt, arrayNoteAmt[i], i);
@@ -75,8 +75,8 @@ function calculateNotes(bill, cash){
 function compare(remainder, noteAmt, index){
 
     if(remainder >= noteAmt){
-        let notes = Math.floor(remainder/noteAmt);
-        remainder = remainder - notes*noteAmt;
+        let notes = Math.floor(remainder/noteAmt); // returns the largest integer value
+        remainder = remainder - notes*noteAmt; // to be passed to the next denomination
         noOfNotes[index].innerText = `${notes}`;
     }
     return remainder
