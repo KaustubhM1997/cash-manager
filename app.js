@@ -32,7 +32,7 @@ nextBtn.addEventListener('click', ()=>{
 
 //check btn clicked handler
 checkBtn.addEventListener('click', ()=>{    // when the check button is clicked
-    clearNoOfNotes();
+    // clearNoOfNotes();
     hideError();
     //error handling
     let billAmtValue= Number(billAmt.value);
@@ -83,11 +83,13 @@ function compare(remainder, noteAmt, index){
 }
 
 //if check button clicked without refreshing the page, clear the no of notes values on the screen
-function clearNoOfNotes(){
-    for(let notes of noOfNotes){
-        notes.innerText = "";
-    }
-}
+// function clearNoOfNotes(){
+//     for(let notes of noOfNotes){
+//         notes.innerHTML = "";
+
+//         console.log(notes);
+//     }
+// }
 
 function showError(text){
     errorDiv.style.display = "block";
